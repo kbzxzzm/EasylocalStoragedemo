@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>vue-demo</title>
+    <style>
+      ul{
+        /* text-decoration: line-through; */
+      }
+      li.done{
+        color: red;
+         text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <p>{{title}}</p>
+      <p>{{subTitle}}</p>
+      <ul>
+        <li v-for='(i,index) in item'
+        :key="index"
+        @click='addstyle(index)'
+        :class="{'done':i.done}"
+        >{{index+1}}----{{i.text}}</li>
+        <!-- :style="{'text-decoration':i.done?'line-through':''}"直接控制class更加方便 -->
+      </ul>
+      <input type="text" v-model="s1" >
+      <button @click='setlocal' @keyup.enter='setlocal'>增加数据</button>
+      <button @click='removelocal'>清空本地缓存</button>
+      </button>
+    </div>
+    <!-- built files will be auto injected -->
+
+  </body>
+</html>
