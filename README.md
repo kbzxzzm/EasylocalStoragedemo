@@ -1,4 +1,5 @@
 # vue-demo
+# 该文件存储设置和created拿数据展示
 
 > A Vue.js project
 
